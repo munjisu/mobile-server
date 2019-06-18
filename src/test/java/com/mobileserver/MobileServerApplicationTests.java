@@ -31,13 +31,13 @@ public class MobileServerApplicationTests {
 
 	@Test
 	public void getUserTest() {
-		User newUser = new User("20190321001", "1234", "munjisu");
+		User newUser = new User("20190618001", "1234", "munjisu");
 		userRepository.save(newUser);
 
-		User selectUser = Optional.ofNullable(userRepository.findById("20190321001")).get().orElse(new User());
+		User selectUser = Optional.ofNullable(userRepository.findById("20190618001")).get().orElse(new User());
 		assertThat(selectUser.getUserName()).isEqualTo("munjisu");
 
-		userRepository.deleteById("20190321001");
+		userRepository.deleteById("20190618001");
 	}
 
 	@Test
