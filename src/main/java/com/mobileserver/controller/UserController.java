@@ -21,4 +21,9 @@ public class UserController {
     public User createUser(@RequestBody UserCreateRequest req) {
         return userService.createUser(req);
     }
+
+    @PutMapping("/user/{id}")
+    public User updateUser(@RequestBody UserCreateRequest req) {
+        return userService.createUser(req);
+    }
 }
