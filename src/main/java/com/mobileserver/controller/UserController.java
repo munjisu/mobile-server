@@ -31,4 +31,9 @@ public class UserController {
     public User deleteUser(@RequestBody UserCreateRequest req) {
         return userService.createUser(req);
     }
+
+    @GetMapping("/users")
+    public User getUsers() {
+        return userService.getUser("1");
+    }
 }
